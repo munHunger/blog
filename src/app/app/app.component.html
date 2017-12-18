@@ -2,7 +2,7 @@
   detail <br />
   <blog-post-detail></blog-post-detail>
 </div>
-<div *ngIf="!clicked" (click)="clicked = true">
+<div *ngIf="!clicked">
   thumb <br />
   <div class="row col-11">
       <blog-post-thumb *ngFor="let i of list" class="col-lg-3 col-md-4 col-sm-6"></blog-post-thumb>

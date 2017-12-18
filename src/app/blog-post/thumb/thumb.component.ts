@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./thumb.component.css']
 })
 export class BlogPostThumbComponent {
+    clicked:boolean = false;
+
+    public click() {
+        this.clicked = true;
+    }
 }
