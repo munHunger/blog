@@ -1,0 +1,16 @@
+.thumb {
+    background-image: url('https://cdn.wallpapersafari.com/28/37/VBbj9G.jpg');
+    background-size: cover;
+}
+
+.info-box {
+    min-height: 100px;
+    background-color: #fff;
+    background: linear-gradient(#fff, rgb(250, 250, 250));
+    position: relative;
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.poster {
+    min-height: 250px;
+}
