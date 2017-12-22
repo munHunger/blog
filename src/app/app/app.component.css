@@ -1,0 +1,14 @@
+.grid {
+    opacity: 1;
+    animation: fade-away 0.75s forwards;
+}
+
+@keyframes fade-away {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
