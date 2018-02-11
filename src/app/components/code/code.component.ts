@@ -11,14 +11,20 @@ import 'rxjs/add/operator/map';
 })
 export class CodeComponent {
     @Input('inline') isInline: boolean = true;
+    private codeSrc: string;
+
+    @Input('src')
+    set src(url: string) {
+        this.codeSrc = url;
+        this.http
+            .get(this.codeSrc, {responseType: 'text'})
+            .pipe()
+            .subscribe(res => this.code = res);
+    }
 
     private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(package|import|if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
     
     constructor(private http: HttpClient) {
-        this.http
-            .get("https://raw.githubusercontent.com/munHunger/idp/master/src/main/java/se/munhunger/idp/Startup.java", {responseType: 'text'})
-            .pipe()
-            .subscribe(res => this.code = res);
     }
 
     private code: string;

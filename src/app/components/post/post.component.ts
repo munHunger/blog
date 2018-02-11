@@ -10,7 +10,8 @@ import 'rxjs/add/operator/map';
     styleUrls: ['./post.component.css']
 })
 export class PostComponent {
-    
+    private title: string = "Oleaster testing";
+    private github: string = "https://github.com";
     constructor(private http: HttpClient) {
     }
 }
