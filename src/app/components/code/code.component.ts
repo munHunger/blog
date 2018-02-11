@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./code.component.css']
 })
 export class CodeComponent {
-    private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
+    private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(package|import|if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
     
     private code = "public class UserService {\n" +
         "\t@Inject\n" +
