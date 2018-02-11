@@ -1,0 +1,62 @@
+.code-blur {
+  color:transparent;
+  text-shadow:0 0 3px rgb(238,231,225);
+}
+
+.code-blur .tab {
+  width:50px;
+}
+
+.code-blur .keyword {
+  text-shadow:0 0 3px rgb(20,169,239);
+}
+
+.code-blur .object {
+  text-shadow:0 0 3px rgb(208,204,74);
+}
+
+.code-blur .function {
+  text-shadow:0 0 3px rgb(195,146,71);
+}
+
+.code {
+  color:rgb(238, 231, 225);
+}
+
+.inline-code {
+  padding:30px;
+  background-color:#24282b;
+}
+
+.code .keyword {
+  color:rgb(20, 169, 239);
+}
+
+.code .object {
+  color:rgb(208,204,74);
+}
+
+.code .function {
+  color:rgb(195,146,71);
+}
+
+.code .string {
+  color:rgb(200,62,0);
+}
+
+.code-blur .string {
+  color:rgb(200,62,0);
+}
+
+.menu .fa:hover {
+  color:rgb(218,218,218);
+}
+
+.menu .fa, .menu img {
+  cursor:pointer;
+}
+
+.menu .logo {
+  width:30px;
+}
+

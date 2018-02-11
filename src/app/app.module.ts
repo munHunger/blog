@@ -3,14 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app/app.component';
 
-import { BlogPostThumbComponent } from './blog-post/thumb/thumb.component';
-import { BlogPostDetailComponent } from './blog-post/detail/detail.component';
+import { CodeComponent } from './components/code/code.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogPostThumbComponent,
-    BlogPostDetailComponent
+    CodeComponent
   ],
   imports: [
     BrowserModule

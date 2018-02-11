@@ -1,10 +1,1 @@
-<div *ngIf="clicked" (click)="clicked = false">
-  detail <br />
-  <blog-post-detail></blog-post-detail>
-</div>
-<div (click)="clicked = true">
-  thumb <br />
-  <div class="row col-11" [ngClass]="{'grid': clicked}">
-      <blog-post-thumb *ngFor="let i of list" class="col-lg-3 col-md-4 col-sm-6"></blog-post-thumb>
-  </div>
-</div>
+<code-block></code-block>

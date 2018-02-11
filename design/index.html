@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/code.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="back-part"></div>
+        <div class="content-wrapper">
+            <div class="menu"><img src="assets/img/logo.png" class="logo"><i class="fa fa-envelope"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-github"></i><i class="fa fa-user"></i></div>
+            <div class="header"><div class="code-blur">
+    <span class="keyword">public class</span> <span class="object">Bootstrap</span> <span class="keyword">extends</span> <span class="object">HttpServlet</span> {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public void</span> <span class="function">init</span>(<span class="object">ServletConfig</span> config) <span class="keyword">throws</span> <span class="object">ServletException</span> {<br />
+super.init(config);<br />
+
+    <span class="object">Swagger</span> swagger = <span class="keyword">new</span> <span class="object">Swagger</span>();<br />
+new SwaggerContextService().withServletConfig(config).updateSwagger(swagger);<br />
+
+BeanConfig beanConfig = new BeanConfig();<br />
+beanConfig.setVersion("1.0.0");<br />
+<div class="tab"></div><div class="tab"></div>beanConfig.setSchemes(new String[]{"http", "https"});<br />
+<div class="tab"></div><div class="tab"></div>beanConfig.setBasePath("/api");<br />
+<div class="tab"></div><div class="tab"></div>beanConfig.setResourcePackage("oven");<br />
+<div class="tab"></div><div class="tab"></div>beanConfig.setScan(true);<br />
+<div class="tab"></div>}<br />
+}<br />
+</div>
+                <div class="overlay-title"><span>Setting up swagger</span></div>
+            </div>
+            <div class="content">
+                <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut lorem eget ante egestas dignissim ut sed enim. Maecenas tempus hendrerit tellus, nec finibus turpis consectetur a. Integer in nisi metus. Aliquam est nunc, imperdiet
+                    ac malesuada non, laoreet ut quam. Fusce at ultrices sapien. Maecenas semper nulla in tortor tincidunt, a imperdiet justo porttitor. Proin et dolor suscipit mi consequat blandit. Etiam consequat placerat volutpat. Morbi convallis risus
+                    vitae metus ultricies vulputate.<br><br></p>
+                <div class="inline-code"><div class="code">
+    <span class="keyword">public class</span> <span class="object">Bootstrap</span> <span class="keyword">extends</span> <span class="object">HttpServlet</span> {<br />
+    <div style="text-indent: 30px;"><span class="keyword">public void</span> <span class="function">init</span>(<span class="object">ServletConfig</span> config) <span class="keyword">throws</span> <span class="object">ServletException</span> {<br /></div>
+    <div style="text-indent: 60px;">super.init(config);<br /></div>
+
+    <div style="text-indent: 60px;"><span class="object">Swagger</span> swagger = <span class="keyword">new</span> <span class="object">Swagger</span>();<br /></div>
+    <div style="text-indent: 60px;"><span class="keyword">new</span> <span class="object">SwaggerContextService</span>().withServletConfig(config).updateSwagger(swagger);<br /></div>
+
+    <div style="text-indent: 60px;"><span class="object">BeanConfig</span> beanConfig = <span class="keyword">new</span> <span class="object">BeanConfig</span>();<br /></div>
+    <div style="text-indent: 60px;">beanConfig.setVersion(<span class="string">"1.0.0"</span>);<br /></div>
+</div></div>
+                <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut lorem eget ante egestas dignissim ut sed enim. Maecenas tempus hendrerit tellus, nec finibus turpis consectetur a. Integer in nisi metus. Aliquam est nunc, imperdiet
+                    ac malesuada non, laoreet ut quam. Fusce at ultrices sapien. Maecenas semper nulla in tortor tincidunt, a imperdiet justo porttitor. Proin et dolor suscipit mi consequat blandit. Etiam consequat placerat volutpat. Morbi convallis risus
+                    vitae metus ultricies vulputate.<br><br></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

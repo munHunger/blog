@@ -1,0 +1,5 @@
+<div class="inline-code">
+    <div class="code">
+        <span *ngFor="let word of codeSplit()" [ngClass]="{'keyword': word.keyword, 'literal': word.literal, 'object': word.object, 'function': word.function}">{{word.word}}<span *ngIf="word.word === '\t'"><span *ngFor="let dummy of ' '.repeat(4).split('')">&nbsp;</span></span><br *ngIf="word.word == '\n'" /></span>
+    </div>
+</div>
