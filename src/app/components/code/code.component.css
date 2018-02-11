@@ -1,50 +1,49 @@
 .code-blur {
-    color:transparent;
-    text-shadow:0 0 3px rgb(238,231,225);
-  }
-  
+  color:transparent;
+  text-shadow:0 0 3px rgb(238,231,225);
+}
 
-  
-  .code-blur .keyword {
-    text-shadow:0 0 3px rgb(20,169,239);
-  }
-  
-  .code-blur .object {
-    text-shadow:0 0 3px rgb(208,204,74);
-  }
-  
-  .code-blur .function {
-    text-shadow:0 0 3px rgb(195,146,71);
-  }
-  
-  .code {
-    color:rgb(238, 231, 225);
-  }
-  
-  .inline-code {
-    padding:30px;
-    background-color:#24282b;
-  }
-  
-  .code .keyword {
-    color:rgb(20, 169, 239);
-  }
-  
-  .code .object {
-    color:rgb(208,204,74);
-  }
-  
-  .code .function {
-    color:rgb(195,146,71);
-  }
-  
-  .code .literal {
-    color:rgb(200,62,0);
-  }
-  
-  .code-blur .literal {
-    color:rgb(200,62,0);
-  }
+.code-blur .keyword {
+  text-shadow:0 0 3px rgb(20,169,239);
+}
+
+.code-blur .object {
+  text-shadow:0 0 3px rgb(208,204,74);
+}
+
+.code-blur .function {
+  text-shadow:0 0 3px rgb(195,146,71);
+}
+
+.code-blur .literal {
+  text-align: 0 0 3px rgb(200,62,0);
+}
+
+.code {
+  color:rgb(238, 231, 225);
+}
+
+.inline-code {
+  padding:30px;
+  background-color:#24282b;
+}
+
+.code .keyword {
+  color:rgb(20, 169, 239);
+}
+
+.code .object {
+  color:rgb(208,204,74);
+}
+
+.code .function {
+  color:rgb(195,146,71);
+}
+
+.code .literal {
+  color:rgb(200,62,0);
+}
+
 .tab {
-    text-indent: 30px;
+  text-indent: 30px;
 }

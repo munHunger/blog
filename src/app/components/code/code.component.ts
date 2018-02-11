@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/catch';
@@ -10,6 +10,8 @@ import 'rxjs/add/operator/map';
     styleUrls: ['./code.component.css']
 })
 export class CodeComponent {
+    @Input('inline') isInline: boolean = true;
+
     private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(package|import|if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
     
     constructor(private http: HttpClient) {
