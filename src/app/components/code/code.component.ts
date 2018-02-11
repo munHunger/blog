@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'code-block',
@@ -8,29 +12,15 @@ import { Component } from '@angular/core';
 export class CodeComponent {
     private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(package|import|if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
     
-    private code = "public class UserService {\n" +
-        "\t@Inject\n" +
-        "\tprivate UserDAO userDAO;\n" +
-        "\tpublic void createUser(User user) throws NoSuchAlgorithmException, EmailNotValidException {\n" +
-            "\t\tuser.setHashPassword(HashPass.hashPassword(user.getHashPassword()));\n" +
-            "\t\tif (!EmailValidation.isValidEmailAddress(user.getEmail()))\n" +
-                    "\t\t\tthrow new EmailNotValidException();\n" +
-            "\t\tuserDAO.createUser(user);\n" +
-        "\t}\n" +
-        "\tpublic User getUser(String username) throws NotInDatabaseException {\n" +
-            "\t\treturn userDAO.getUser(username).orElseThrow(NotInDatabaseException::new);\n" +
-        "\t}\n" +
-        "\tpublic void updateUser(User user) throws NoSuchAlgorithmException, NotInDatabaseException, EmailNotValidException {\n" +
-            "\t\tuser.setHashPassword(HashPass.hashPassword(user.getHashPassword()));\n" +
-            "\t\tif (!EmailValidation.isValidEmailAddress(user.getEmail()))\n" +
-                "\t\t\tthrow new EmailNotValidException();\n" +
-            "\t\tuserDAO.updateUser(user);\n" +
-        "\t}\n" +
-        "\tpublic void deleteUser(String username) throws NotInDatabaseException {\n" +
-            "\t\tuserDAO.deleteUser(\"pelle\");\n" +
-        "\t}\n" +
-    "}\n";
+    constructor(private http: HttpClient) {
+        this.http
+            .get("https://raw.githubusercontent.com/munHunger/idp/master/src/main/java/se/munhunger/idp/Startup.java", {responseType: 'text'})
+            .pipe()
+            .subscribe(res => this.code = res);
+    }
 
+    private code: string;
+    
     public codeSplit(): WordInfo[]{
         let result = [];
         let match;
