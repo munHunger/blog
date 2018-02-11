@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
 
 import { CodeComponent } from './components/code/code.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CodeComponent
+    CodeComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

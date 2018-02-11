@@ -47,16 +47,3 @@
 .code-blur .string {
   color:rgb(200,62,0);
 }
-
-.menu .fa:hover {
-  color:rgb(218,218,218);
-}
-
-.menu .fa, .menu img {
-  cursor:pointer;
-}
-
-.menu .logo {
-  width:30px;
-}
-
