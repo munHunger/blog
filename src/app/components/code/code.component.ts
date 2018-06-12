@@ -21,30 +21,64 @@ export class CodeComponent {
             .pipe()
             .subscribe(res => this.code = res);
     }
-
-    private specialRegex = /(\n|\t)|(".*"|true|false|([0-9]+(\.[0-9]*)?(d|l|f)?))|([^a-zA-Z0-9_@]+?)|(package|import|if|else|for|while|switch|return|break|do|throws|throw|implements|extends|public|private|protected|class|new|extends|throws|void|boolean|int|float|long|double)|((?<= |\n|\()@?[A-Z][a-zA-Z]*)|((?<= |\n|\()[a-z][a-zA-Z]*\()|(.+?)/g;
     
     constructor(private http: HttpClient) {
     }
 
+    private characterRegex = /(\".*\")|([;() -+<>={}\/\*\.]?)(.*?)([;() -+<>={}\/\*\n\t]+)/g
+    private keywordRegex = /import|package|public|private|protected|class|int|long|double|boolean|new|throws|static|return/
+    private commentRegex = /\/\/.*|\/\*\*|^\s*\*.*/
+    private litteralRegex = /\".*\"/
+    private objectRegex = /[A-Z][a-z0-9]*/
     private code: string;
     
     public codeSplit(): WordInfo[]{
         let result = [];
-        let match;
-        while(match = this.specialRegex.exec(this.code)){
-            let word = new WordInfo();
-            word.word = match[0];
-            if(match[2])
-                word.literal = true;
-            if(match[7])
-                word.keyword = true;
-            if(match[8])
-                word.object = true;
-            if(match[9])
-                word.function = true;
-            result.push(word);
+        if(!this.code)
+            return [];
+        let lines = this.code.split("\n");
+        for(var i = 0; i < lines.length; i++) {
+            let line = lines[i] + "\n";
+            
+            if(this.commentRegex.exec(line) != null) {
+                let word = new WordInfo();
+                word.comment = true;
+                word.word = line;
+                result.push(word);
+                word = new WordInfo();
+                word.word = "\n";
+                result.push(word);
+                continue;
+            }
+            let match;
+            while(match = this.characterRegex.exec(line)) {
+                let word = new WordInfo();
+                word.word = match[3];
+                let keyword = this.keywordRegex.exec(match[3]);
+                if(match[1] != null)
+                    word.literal = true;
+                else if(result.length > 1 && result[result.length-1].word === "\"")
+                    word.literal = true;
+                else if(this.objectRegex.exec(match[3]) != null)
+                    word.object = true;
+                else if(keyword != null && keyword[0] === match[3])
+                    word.keyword = true;
+                else if(result.length > 1) {
+                    if(result[result.length-1].word === ".")
+                        word.copyClass(result[result.length-2]);
+                }
+                result.push(word);
+                
+                for (var n = 0; n < match[4].length; n++) {
+                    word = new WordInfo();
+                    word.word = match[4].charAt(n);
+                    result.push(word);
+                }
+            }
         }
+        let word = new WordInfo();
+        word.word = this.code;
+        result.push(word);
         return result;
     }
 }
@@ -54,4 +88,13 @@ class WordInfo{
     public literal: boolean;
     public object: boolean;
     public function: boolean;
+    public comment: boolean;
+
+    public copyClass(word: WordInfo) {
+        this.keyword = word.keyword;
+        this.literal = word.literal;
+        this.object = word.object;
+        this.function = word.function;
+        this.comment = word.comment;
+    }
 }

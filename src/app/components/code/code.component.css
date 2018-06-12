@@ -19,6 +19,10 @@
   text-align: 0 0 3px rgb(200,62,0);
 }
 
+.code-blur .comment {
+  text-align: 0 0 3px rgb(65, 145, 59);
+}
+
 .code {
   color:rgb(238, 231, 225);
 }
@@ -42,6 +46,10 @@
 
 .code .literal {
   color:rgb(200,62,0);
+}
+
+.code .comment {
+  color: rgb(65, 145, 59);
 }
 
 .tab {
