@@ -1,7 +1,7 @@
 {
     "title": "Oleaster testing",
     "github": "https://github.com/munhunger",
-    "headerCode": "https://raw.githubusercontent.com/munHunger/blog/master/data/posts/oleaster/Header.java",
+    "headerCode": "/assets/data/posts/oleaster/Header.java",
     "parts": [
         {
             "text": "Most people like software that is unittested and a large codebase with 100% code cover is like a wet dream for developers. Or at least I hope it is and I am not the only one who really love it. The problem is however that few projects are well tested, especially in terms of unittests."
@@ -10,27 +10,27 @@
             "text": "From my perspective I used to hate writing unittests and thus I never experienced the benefits of a tested codebase. I hated writing test cases because it felt so cluncy writing jUnit like tests where you get a lot of code repetition since a lot of tests need the same setup code. Now, I get what you are saying, that I should just be a good programmer and structure my code in a way to avoid code repetitions. But the problem is that restructuring jUnit testcases to avoid code repetition takes a lot of time and can be quite difficult as the structure easily grows to a lot of different files and packages."
         },
         {
-            "text": "The solution I found to my problems was simply throwing out the syntax of \"classic\" testing and replaced it with Oleaster, which employs a jasmin like test syntax. Test cases written with oleaster is written in a tree structure where you \"describe\" your current scenario, and then write some code to setup the envirornment/code to look like it. You then write some tests to make sure that the scenario is as expected and that it is performing as expected, for example you can write something like this"
+            "text": "The solution I found to my problems was simply throwing out the syntax of *classic* testing and replaced it with Oleaster, which employs a jasmin like test syntax. Test cases written with oleaster is written in a tree structure where you *describe* your current scenario, and then write some code to setup the envirornment/code to look like it. You then write some tests to make sure that the scenario is as expected and that it is performing as expected, for example you can write something like this"
         },
         {
-            "text": "https://raw.githubusercontent.com/munHunger/blog/master/data/posts/oleaster/Simple.java",
+            "text": "/assets/data/posts/oleaster/Simple.java",
             "isCode": true
         },
         {
             "text": "That is a super basic example, but it shows that the test is not that far from being plain english. And as you can see it relies heavily on lambda expressions. As I previously stated you can combine multiple tests into a tree like this"
         },
         {
-            "text": "https://raw.githubusercontent.com/munHunger/blog/master/data/posts/oleaster/Tree.java",
+            "text": "/assets/data/posts/oleaster/Tree.java",
             "isCode": true
         },
         {
-            "text": "You can continue doing this infinitely to create really large tests. In the example shown it will create the file twice, once for each test. You can change it to use before instead of beforeEach if this is not desired, and you can also use afterEach to cleanup if needed."
+            "text": "You can continue doing this infinitely to create really large tests. In the example shown it will create the file twice, once for each test. You can change it to use `before` instead of `beforeEach` if this is not desired, and you can also use `afterEach` to cleanup if needed."
         },
         {
             "text": "So how do you go about using oleaster? I would highly recomend using powermock with any testing so I will show you how to use oleaster with powermock. First of you will need to add your dependencies"
         },
         {
-            "text": "https://raw.githubusercontent.com/munHunger/blog/master/data/posts/oleaster/build.gradle",
+            "text": "/assets/data/posts/oleaster/build.gradle",
             "isCode": true
         },
         {
@@ -40,7 +40,7 @@
             "text": "So now that it is included you will need to tell junit to use PowerMockRunner, and then tell PowerMockRunner to use Oleaster... it is easier than it sounds. You simply need to add some annotations"
         },
         {
-            "text": "https://raw.githubusercontent.com/munHunger/blog/master/data/posts/oleaster/Full.java",
+            "text": "/assets/data/posts/oleaster/Full.java",
             "isCode": true
         },
         {

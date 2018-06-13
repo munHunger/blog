@@ -1,6 +1,6 @@
 <div id="back-part"></div>
 <div class="container">
-    <div class="content-wrapper">
+    <div *ngIf="post" class="content-wrapper">
         <div class="menu">
             <a href="/"><img src="assets/img/logo.png" class="logo"></a>
             <!--<i class="fa fa-envelope"></i>-->
@@ -17,10 +17,8 @@
         </div>
         <div class="content">
             <span *ngFor="let part of post.parts">
-                <p *ngIf="!part.isCode">
-                    <br />
-                    {{part.text}}
-                </p>
+                <markdown *ngIf="!part.isCode" [data]="part.text">
+                </markdown>
                 <code-block *ngIf="part.isCode" src="{{part.text}}"></code-block>
             </span>
         </div>

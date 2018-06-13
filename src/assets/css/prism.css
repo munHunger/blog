@@ -42,6 +42,11 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
      overflow: auto;
  }
  
+ .thumbnail pre[class*="language-"],
+ .code-blur pre[class*="language-"] {
+    overflow: hidden;
+  }
+  
  /* Inline code */
  :not(pre) > code[class*="language-"] {
      padding: .1em;

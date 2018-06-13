@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'code-block',
@@ -11,6 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class CodeComponent {
     @Input('inline') isInline: boolean = true;
+    @Input('thumbnail') thumbnail: boolean = false;
     private codeSrc: string;
 
     @Input('src')
@@ -25,6 +24,7 @@ export class CodeComponent {
     constructor(private http: HttpClient) {
     }
 
+    @Input('code')
     private code: string = "";
 
     public getCode(): string {

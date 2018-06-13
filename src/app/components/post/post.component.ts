@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
 import { Post } from '../../models/post.model';
 import { PostPart } from '../../models/postPart.model';
+import { ActivatedRoute, Router } from "@angular/router";
+import { PostListElement } from '../../models/postListElement.model';
 
 @Component({
     selector: 'post',
@@ -13,7 +13,16 @@ import { PostPart } from '../../models/postPart.model';
 })
 export class PostComponent {
     private post: Post;
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private activeRoute: ActivatedRoute, private router: Router) {
+        activeRoute.paramMap.subscribe(map => {
+            let id = map.get("post");
+            http.get("/assets/data/posts.json").subscribe(res => {
+                let list: PostListElement[] = res as PostListElement[];
+                for(let i = 0; i < list.length; i++)
+                    if(list[i].title == id)
+                        this.src = list[i].url;
+            });
+        });
     }
     
     @Input('src')
@@ -21,5 +30,9 @@ export class PostComponent {
         this.http
             .get(url)
             .subscribe(res => this.post = res as Post);
+    }
+
+    private home() {
+        this.router.navigate([]);
     }
 }

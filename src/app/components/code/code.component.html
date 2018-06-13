@@ -1,4 +1,4 @@
-<div class="inline-code">
+<div [ngClass]="{'inline-code': !thumbnail, 'thumbnail': thumbnail}">
     <div *ngIf="getCode().length > 0" [ngClass]="{'code': isInline, 'code-blur': !isInline}">
         <handy-syntax-highlighter [language]="'java'" [content]="getCode()"></handy-syntax-highlighter>
     </div>
