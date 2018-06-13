@@ -18,6 +18,7 @@
         <div class="content">
             <span *ngFor="let part of post.parts">
                 <p *ngIf="!part.isCode">
+                    <br />
                     {{part.text}}
                 </p>
                 <code-block *ngIf="part.isCode" src="{{part.text}}"></code-block>
