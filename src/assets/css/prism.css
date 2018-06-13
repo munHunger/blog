@@ -28,6 +28,12 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
      hyphens: none;
  
  }
+
+ .code-blur code[class*="language-"],
+ .code-blur pre[class*="language-"] {
+  color: transparent;
+  text-shadow: 0 0 3px rgb(204, 204, 204);
+ }
  
  /* Code blocks */
  pre[class*="language-"] {
@@ -42,7 +48,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
      border-radius: .3em;
      white-space: normal;
  }
- 
+
  .token.comment,
  .token.block-comment,
  .token.prolog,
@@ -50,9 +56,21 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  .token.cdata {
      color: #999;
  }
+ .code-blur .token.comment,
+ .code-blur .token.block-comment,
+ .code-blur .token.prolog,
+ .code-blur .token.doctype,
+ .code-blur .token.cdata {
+     color: transparent;
+     text-shadow: 0 0 3px rgb(153, 153, 153);
+ }
  
  .token.punctuation {
-     color: #ccc;
+    color: #ccc;
+ }
+ .code-blur .token.punctuation {
+    color: transparent;
+    text-shadow: 0 0 3px rgb(204, 204, 204);
  }
  
  .token.tag,
@@ -61,23 +79,51 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  .token.deleted {
      color: #e2777a;
  }
+
+ .code-blur .token.tag,
+ .code-blur .token.attr-name,
+ .code-blur .token.namespace,
+ .code-blur .token.deleted {
+     color: transparent;
+     text-shadow: 0 0 3px rgb(226, 119, 122);
+ }
  
  .token.function-name {
-     color: #6196cc;
- }
+    color: #6196cc;
+}
+
+.code-blur .token.function-name {
+    color: transparent;
+    text-shadow: 0 0 3px rgb(97, 150, 204);
+}
  
- .token.boolean,
- .token.number,
- .token.function {
-     color: #f08d49;
- }
+.token.boolean,
+.token.number,
+.token.function {
+    color: #f08d49;
+}
+
+.code-blur .token.boolean,
+.code-blur .token.number,
+.code-blur .token.function {
+    color: transparent;
+    text-shadow: 0 0 3px rgb(240, 141, 73);
+}
  
- .token.property,
- .token.class-name,
- .token.constant,
- .token.symbol {
-     color: #f8c555;
- }
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+    color: #f8c555;
+}
+
+.code-blur .token.property,
+.code-blur .token.class-name,
+.code-blur .token.constant,
+.code-blur .token.symbol {
+    color: transparent;
+    text-shadow: 0 0 3px rgb(248, 197, 85);
+}
  
  .token.selector,
  .token.important,
@@ -87,6 +133,15 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
      color: #cc99cd;
  }
  
+ .code-blur .token.selector,
+ .code-blur .token.important,
+ .code-blur .token.atrule,
+ .code-blur .token.keyword,
+ .code-blur .token.builtin {
+    color:transparent;
+    text-shadow: 0 0 3px rgb(204, 153, 205);
+ }
+ 
  .token.string,
  .token.char,
  .token.attr-value,
@@ -94,11 +149,27 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  .token.variable {
      color: #7ec699;
  }
+
+ .code-blur .token.string,
+ .code-blur .token.char,
+ .code-blur .token.attr-value,
+ .code-blur .token.regex,
+ .code-blur .token.variable {
+     color: transparent;
+     text-shadow: 0 0 3px rgb(126, 198, 153);
+ }
  
  .token.operator,
  .token.entity,
  .token.url {
      color: #67cdcc;
+ }
+
+ .code-blur .token.operator,
+ .code-blur .token.entity,
+ .code-blur .token.url {
+     color: transparent;
+     text-shadow: 0 0 3px rgb(103, 205, 204);
  }
  
  .token.important,
