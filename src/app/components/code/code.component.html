@@ -1,5 +1,5 @@
 <div class="inline-code">
-    <div [ngClass]="{'code': isInline, 'code-blur': !isInline}">
-        <span *ngFor="let word of codeSplit()" [ngClass]="{'keyword': word.keyword, 'literal': word.literal, 'object': word.object, 'function': word.function, 'comment': word.comment}">{{word.word}}<span *ngIf="word.word == ' '">&nbsp;</span><span *ngIf="word.word === '\t'"><span *ngFor="let dummy of ' '.repeat(4).split('')">&nbsp;</span></span><br *ngIf="word.word == '\n'" /></span>
+    <div *ngIf="getCode().length > 0" [ngClass]="{'code': isInline, 'code-blur': !isInline}">
+        <handy-syntax-highlighter [language]="'java'" [content]="getCode()"></handy-syntax-highlighter>
     </div>
 </div>

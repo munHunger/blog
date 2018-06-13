@@ -1,3 +1,4 @@
+import { Ng2HandySyntaxHighlighterModule } from 'ng2-handy-syntax-highlighter';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,7 +16,8 @@ import { PostComponent } from './components/post/post.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2HandySyntaxHighlighterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
