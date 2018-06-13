@@ -19,7 +19,7 @@ export class CodeComponent {
         this.http
             .get(this.codeSrc, {responseType: 'text'})
             .pipe()
-            .subscribe(res => this.code = res);
+            .subscribe(res => this.code = "\n" + res);
     }
     
     constructor(private http: HttpClient) {

@@ -19,6 +19,7 @@ a {
 .header {
     background-color:#24282b;
     padding:61px;
+    padding-top: 0px;
     height:330px;
     overflow:hidden;
     position:relative;
