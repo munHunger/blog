@@ -1,0 +1,17 @@
+{
+    "title": "Oleaster testing",
+    "github": "https://github.com/munhunger",
+    "headerCode": "https://raw.githubusercontent.com/munHunger/idp/master/src/main/java/se/munhunger/idp/Startup.java",
+    "parts": [
+        {
+            "text": "Introduction from git"
+        },
+        {
+            "text": "https://raw.githubusercontent.com/munHunger/cosmos/develop/folderScraper/src/test/java/se/mulander/cosmos/folderscraper/test/ScraperTest.java",
+            "isCode": true
+        },
+        {
+            "text": "outro from git"
+        }
+    ]
+}
