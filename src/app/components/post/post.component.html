@@ -2,14 +2,14 @@
 <div class="container">
     <div class="content-wrapper">
         <div class="menu">
-            <img src="assets/img/logo.png" class="logo">
-            <i class="fa fa-envelope"></i>
-            <i class="fa fa-linkedin-square"></i>
+            <a href="/"><img src="assets/img/logo.png" class="logo"></a>
+            <!--<i class="fa fa-envelope"></i>-->
+            <a href="https://www.linkedin.com/in/marcus-m%C3%BCnger-034398123/"><i class="fa fa-linkedin-square"></i></a>
             <a href="{{github}}"><i class="fa fa-github"></i></a>
-            <i class="fa fa-user"></i>
+            <!--<i class="fa fa-user"></i>-->
         </div>
         <div class="header">
-            <code-block [inline]="false" src="https://raw.githubusercontent.com/munHunger/idp/master/src/main/java/se/munhunger/idp/Startup.java"></code-block>
+            <code-block [inline]="false" src="{{headerCode}}"></code-block>
             <div class="overlay-title">
                 <span>{{title}}</span>
             </div>

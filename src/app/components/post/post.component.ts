@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 export class PostComponent {
     private title: string = "Oleaster testing";
     private github: string = "https://github.com";
+    private headerCode: string = "https://raw.githubusercontent.com/munHunger/idp/master/src/main/java/se/munhunger/idp/Startup.java";
     constructor(private http: HttpClient) {
     }
 }
