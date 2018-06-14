@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
 import { Post } from '../../models/post.model';
-import { PostPart } from '../../models/postPart.model';
 import { ActivatedRoute, Router } from "@angular/router";
 import { PostListElement } from '../../models/postListElement.model';
 
@@ -13,6 +12,7 @@ import { PostListElement } from '../../models/postListElement.model';
 })
 export class PostComponent {
     private post: Post;
+    private content: string[];
     constructor(private http: HttpClient, private activeRoute: ActivatedRoute, private router: Router) {
         activeRoute.paramMap.subscribe(map => {
             let id = map.get("post");
@@ -29,7 +29,11 @@ export class PostComponent {
     set src(url: string) {
         this.http
             .get(url)
-            .subscribe(res => this.post = res as Post);
+            .subscribe(res => {
+                this.post = res as Post;
+                this.http.get(this.post.content, {responseType: 'text'})
+                         .subscribe(res => this.content = (res as string).split("[code]"));
+            });
     }
 
     private home() {

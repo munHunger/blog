@@ -16,10 +16,10 @@
             </div>
         </div>
         <div class="content">
-            <span *ngFor="let part of post.parts">
-                <markdown *ngIf="!part.isCode" [data]="part.text">
+            <span *ngFor="let part of content; let index=index; let odd=odd; let even=even;">
+                <markdown *ngIf="even" [data]="part">
                 </markdown>
-                <code-block *ngIf="part.isCode" src="{{part.text}}"></code-block>
+                <code-block *ngIf="odd" src="{{part}}"></code-block>
             </span>
         </div>
     </div>
