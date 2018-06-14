@@ -1,8 +1,14 @@
 [
     {
-        "title": "Oleaster",
+        "title": "oleaster",
         "display": true,
         "releaseDate": 1528881813,
         "url": "/assets/data/posts/oleaster/post.json"
+    },
+    {
+        "title": "resourcePooling",
+        "display": true,
+        "releaseDate": 1528898436,
+        "url": "/assets/data/posts/resourcePool/post.json"
     }
 ]

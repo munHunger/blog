@@ -1,5 +1,7 @@
 .post {
     cursor: pointer;
+    float: left;
+    margin-bottom: 10px;
 }
 
 a {
@@ -29,6 +31,12 @@ a {
     position:relative;
 }
 
+@media (max-width: 600px) {
+    .header{
+        padding: 0px;
+    }
+}
+
 #back-part {
     position:absolute;
     left:0px;
@@ -48,6 +56,8 @@ a {
     box-shadow:1px 0px 5px;
     position:relative;
     min-height:100vh;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .menu {
