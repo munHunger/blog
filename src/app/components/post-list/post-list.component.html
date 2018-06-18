@@ -3,7 +3,7 @@
     <div class="content-wrapper">
         <div class="menu">
             <a href="/"><img src="assets/img/logo.png" class="logo"></a>
-            <!--<i class="fa fa-envelope"></i>-->
+            <i class="fa fa-bell" (click)="toggleSubDialog()"></i>
             <a href="https://www.linkedin.com/in/marcus-m%C3%BCnger-034398123/"><i class="fa fa-linkedin-square"></i></a>
             <a href="https://stackoverflow.com/users/3566441/munhunger"><i class="fa fa-stack-overflow"></i></a>
             <a href="https://github.com/munhunger"><i class="fa fa-github"></i></a>
@@ -21,4 +21,13 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="overlay" (click)="toggleSubDialog()" *ngIf="showSub"></div>
+<div class="subscribe-dialog" *ngIf="showSub">
+    <h3>Subscribe</h3><br />
+    Enter email address to get an email notfication when a new post has been added<br /><br />
+    <input type="email" name="email" placeholder="mail@mail.mail" [(ngModel)]="email"><br /><br />
+    <button (click)="subscribe()">submit</button><br />
 </div>

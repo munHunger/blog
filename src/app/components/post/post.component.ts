@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
 import { Post } from '../../models/post.model';
 import { ActivatedRoute, Router } from "@angular/router";
@@ -13,6 +13,9 @@ import { PostListElement } from '../../models/postListElement.model';
 export class PostComponent {
     private post: Post;
     private content: string[];
+
+    private email: string;
+    private showSub: boolean = false;
     constructor(private http: HttpClient, private activeRoute: ActivatedRoute, private router: Router) {
         activeRoute.paramMap.subscribe(map => {
             let id = map.get("post");
@@ -36,7 +39,24 @@ export class PostComponent {
             });
     }
 
+    private toggleSubDialog() {
+        this.showSub = !this.showSub;
+    }
+
     private home() {
         this.router.navigate([]);
     }
+
+    private subscribe() {
+        let header = new HttpHeaders();
+        header.append('Content-Type', 'application/x-www-form-urlencoded');
+        header.append('Access-Control-Allow-Headers', '*');
+        header.append('Access-Control-Allow-Origin', '*');
+        this.http.post("https://ciqjklrrae.execute-api.eu-west-1.amazonaws.com/prod/subscribe", new subscriptionRequest(this.email), { headers: header }).subscribe();
+        this.toggleSubDialog();
+    }
+
+}
+class subscriptionRequest {
+    constructor(private email:string){}
 }

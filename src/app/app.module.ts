@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app/app.component';
 
 import { CodeComponent } from './components/code/code.component';
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     Ng2HandySyntaxHighlighterModule,
+    FormsModule,
     MarkdownModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
