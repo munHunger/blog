@@ -1,0 +1,6 @@
+{
+    "event": "New blog post",
+    "title": "Securing a model with aspectJ",
+    "description": "A short walk through on how you can secure a model using the black magic that is Aspect oriented programming",
+    "url": "http://munhunger.com/aspectSecurity"
+}
