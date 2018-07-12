@@ -1,0 +1,6 @@
+{
+    "title": "Securing a model with aspectJ",
+    "github": "https://github.com/munhunger",
+    "headerCode": "/assets/data/posts/aspectSecurity/SecurityAspect.aj",
+    "content": "/assets/data/posts/aspectSecurity/post.md"
+}

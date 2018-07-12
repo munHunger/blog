@@ -1,5 +1,11 @@
 [
     {
+        "title": "aspectSecurity",
+        "display": true,
+        "releaseDate": 1531389351,
+        "url": "/assets/data/posts/aspectSecurity/post.json"
+    },
+    {
         "title": "castingDown",
         "display": true,
         "releaseDate": 1529590690,
