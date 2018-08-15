@@ -7,9 +7,11 @@
 
 <url>
   <loc>https://munhunger.com/</loc>
-  <lastmod>2018-07-17T08:18:49+00:00</lastmod>
 </url>
 
+<url>
+  <loc>https://munhunger.com/dockerTesting</loc>
+</url>
 <url>
   <loc>https://munhunger.com/aspectSecurity</loc>
 </url>
