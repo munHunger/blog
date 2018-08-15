@@ -8,6 +8,10 @@ a {
     color: inherit;
 }
 
+.menu a {
+    transform: translateX(50%);
+}
+
 .overlay-title {
     background-color:#1f2325;
     z-index:2;

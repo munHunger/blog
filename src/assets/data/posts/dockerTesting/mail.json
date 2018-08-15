@@ -1,0 +1,6 @@
+{
+    "event": "New blog post",
+    "title": "Running repeatable API tests with docker",
+    "description": "A practical example of how Docker in Docker can help with test repeatability",
+    "url": "http://munhunger.com/dockerTesting"
+}

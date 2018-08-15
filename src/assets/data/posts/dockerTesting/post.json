@@ -1,0 +1,6 @@
+{
+    "title": "Repeatable testing with docker",
+    "github": "https://github.com/munhunger",
+    "headerCode": "/assets/data/posts/dockerTesting/full.sh",
+    "content": "/assets/data/posts/dockerTesting/post.md"
+}

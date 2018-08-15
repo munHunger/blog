@@ -11,9 +11,11 @@ import { AppComponent } from './app/app.component';
 import { CodeComponent } from './components/code/code.component';
 import { PostComponent } from './components/post/post.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { IntroComponent } from './components/intro/intro.component';
 
 const appRoutes: Routes = [
   { path: '', component: PostListComponent },
+  { path: 'intro', component: IntroComponent },
   { path: ':post', component: PostComponent }
 ];
 
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     CodeComponent,
     PostComponent,
-    PostListComponent
+    PostListComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

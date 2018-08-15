@@ -1,5 +1,11 @@
 [
     {
+        "title": "dockerTesting",
+        "display": true,
+        "releaseDate": 1534313955,
+        "url": "/assets/data/posts/dockerTesting/post.json"
+    },
+    {
         "title": "aspectSecurity",
         "display": true,
         "releaseDate": 1531389351,
