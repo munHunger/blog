@@ -1,6 +1,6 @@
 ---
 title: 'Dungeons and dragons screen'
-image: 'https://cdn.pixabay.com/photo/2019/08/17/21/53/dungeons-and-dragons-4413051_960_720.jpg'
+image: '/blog/DnD/1/header.jpg'
 created: 2023-01-26
 updated: 2023-01-26
 tags:
