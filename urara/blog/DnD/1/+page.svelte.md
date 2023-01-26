@@ -1,5 +1,5 @@
 ---
-title: 'Dungeons and dragons screen'
+title: 'Dungeons and dragons query system'
 image: '/blog/DnD/1/header.jpg'
 created: 2023-01-26
 updated: 2023-01-26

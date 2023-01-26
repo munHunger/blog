@@ -2,6 +2,10 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 
 export const theme: ThemeConfig = [
   {
+    name: 'night',
+    text: '🌃 Night'
+  },
+  {
     name: 'cmyk',
     text: '🖨 Light'
   },
@@ -20,10 +24,6 @@ export const theme: ThemeConfig = [
   {
     name: 'synthwave',
     text: '🌃 Synthwave'
-  },
-  {
-    name: 'night',
-    text: '🌃 Night'
   },
   {
     name: 'lofi',
@@ -55,14 +55,14 @@ export const head: HeadConfig = {}
 
 export const header: HeaderConfig = {
   nav: [
-    {
-      text: 'Get Started',
-      link: '/hello-world'
-    },
-    {
-      text: 'Elements',
-      link: '/hello-world/elements'
-    }
+    // {
+    //   text: 'Get Started',
+    //   link: '/hello-world'
+    // },
+    // {
+    //   text: 'Elements',
+    //   link: '/hello-world/elements'
+    // }
   ]
 }
 
