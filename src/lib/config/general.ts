@@ -2,16 +2,16 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 
 export const theme: ThemeConfig = [
   {
+    name: 'dracula',
+    text: '🧛 Dark'
+  },
+  {
     name: 'night',
     text: '🌃 Night'
   },
   {
     name: 'cmyk',
     text: '🖨 Light'
-  },
-  {
-    name: 'dracula',
-    text: '🧛 Dark'
   },
   {
     name: 'valentine',
