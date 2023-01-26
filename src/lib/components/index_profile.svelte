@@ -14,7 +14,7 @@
     {/if}
     {#if site.author.status}
       <div
-        class="absolute z-20 rounded-full w-8 h-8 md:w-10 md:h-10 bottom-0 right-0 bg-base-100 shadow-xl text-lg md:text-xl text-center py-0.5 md:py-1.5">
+        class="absolute select-none z-20 rounded-full w-8 h-8 md:w-10 md:h-10 bottom-0 right-0 bg-base-100 shadow-xl text-lg md:text-xl text-center py-0.5 md:py-1.5">
         {site.author.status}
       </div>
     {/if}
