@@ -31,7 +31,7 @@ But anyways, I started out the way I always do, which can only be described as t
 
 Well turns out it is at least a bit tricky and my first iteration ended up as a pile of spaghetti code that I barely worked and was so rigid that I could forget about adding any features that I wanted.
 
-So I scrapped it, and started doing a little bit of research and stumbled upon [https://www.npmjs.com/package/nearley](nearley) which I believe would be absolutely great for most compiler projects. Unfortunately it wasn't really possible for me to use it because I could for the life of me figure out how to make it tab/space aware, and I wanted my language to have semantically important spaces the same way yaml does.
+So I scrapped it, and started doing a little bit of research and stumbled upon [nearley](https://www.npmjs.com/package/nearley) which I believe would be absolutely great for most compiler projects. Unfortunately it wasn't really possible for me to use it because I could for the life of me figure out how to make it tab/space aware, and I wanted my language to have semantically important spaces the same way yaml does.
 
 Back to square one and I decided to make everything myself... but which some background knowledge.
 So I made it the way I should have the first time, with a tokenizer and parser which gave me an output in the form of a parse tree.
