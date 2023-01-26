@@ -8,7 +8,7 @@ export const site: SiteConfig = {
   lang: 'en-US',
   description: 'Powered by SvelteKit/Urara',
   author: {
-    avatar: '/assets/maskable@512.png',
+    avatar: '/assets/profile.jpg',
     name: 'Marcus Münger',
     status: '🌸',
     bio: 'Fullstack developer with a passion for learning'
