@@ -4,7 +4,7 @@ image: '/blog/DnD/1/header.jpg'
 created: 2023-01-26
 updated: 2023-01-26
 tags:
-  - 'D&D'
+  - 'DnD'
   - 'javascript'
   - 'typescript'
   - 'query'
