@@ -3,6 +3,7 @@ title: 'Dice parser'
 image: '/blog/DnD/2/header.jpg'
 created: 2023-01-28
 updated: 2023-01-28
+summary: Writing a parser for a simplistic dice expression using nearley
 tags:
   - 'DnD'
   - 'javascript'
