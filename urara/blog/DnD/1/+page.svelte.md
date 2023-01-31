@@ -1,6 +1,7 @@
 ---
 title: 'Dungeons and dragons query system'
 image: '/blog/DnD/1/header.jpg'
+summary: Creating a simple query engine for yaml files used in a DnD wiki
 created: 2023-01-26
 updated: 2023-01-26
 tags:

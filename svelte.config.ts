@@ -4,6 +4,8 @@ import type { Config } from '@sveltejs/kit'
 import adapterAuto from '@sveltejs/adapter-auto'
 import adapterNode from '@sveltejs/adapter-node'
 import preprocess from 'svelte-preprocess';
+import seqPreprocessor from 'svelte-sequential-preprocessor'
+import { preprocessThrelte } from '@threlte/preprocess'
 import adapterStatic from '@sveltejs/adapter-static'
 // svelte preprocessor
 import { mdsvex } from 'mdsvex'
@@ -15,7 +17,7 @@ const defineConfig = (config: Config) => config
 
 export default defineConfig({
   extensions: ['.svelte', ...(mdsvexConfig.extensions as string[])],
-  preprocess: [mdsvex(mdsvexConfig), importAssets(), vitePreprocess(), preprocess()],
+  preprocess: [mdsvex(mdsvexConfig), importAssets(), vitePreprocess(), preprocess(), preprocessThrelte()],
   kit: {
     adapter: Object.keys(process.env).some(key => ['VERCEL', 'NETLIFY'].includes(key))
       ? adapterAuto()

@@ -13,6 +13,9 @@ import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
 
 export default defineConfig({
+  ssr: {
+		noExternal: ['three', 'troika-three-text']
+	},
   envPrefix: 'URARA_',
   build: {
     sourcemap: false,

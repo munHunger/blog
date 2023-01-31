@@ -1,6 +1,7 @@
 ---
 title: 'Creating a compiler for language learning'
 image: '/blog/linitic/1/header.jpg'
+summary: Writing a DSL compiler for my japanese learning app
 created: 2023-01-26
 updated: 2023-01-26
 tags:

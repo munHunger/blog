@@ -1,35 +1,24 @@
-<script lang="ts">
-    import * as THREE from "three"
-    import {onMount} from "svelte"
-
-
-    onMount(() => {
-          const scene = new THREE.Scene();
-          const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-          const renderer = new THREE.WebGLRenderer();
-          renderer.setSize( 300, 300 );
-
-          container.appendChild( renderer.domElement );
-          
-          const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-          const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-          const cube = new THREE.Mesh( geometry, material );
-          scene.add( cube );
-
-          camera.position.z = 5;
-          function animate() {
-                requestAnimationFrame( animate );
-
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                renderer.render( scene, camera );
-          };
-
-          animate();
-    });
-    let container: HTMLDivElement;
+<script>
+  import { OrbitControls, T } from '@threlte/core'
+  import { degToRad } from 'three/src/math/MathUtils'
 </script>
 
-<div bind:this={container} />
+<T.PerspectiveCamera makeDefault position={[0, 10, 10]} fov={24}>
+  <OrbitControls maxPolarAngle={degToRad(80)} enableZoom={false} target={{ y: 0.5 }} />
+</T.PerspectiveCamera>
+
+<T.DirectionalLight castShadow position={[3, 10, 10]} />
+<T.DirectionalLight position={[-3, 10, -10]} intensity={0.2} />
+<T.AmbientLight intensity={0.2} />
+
+<T.Group>
+  <T.Mesh position.y={0.5} castShadow let:ref>
+    <T.BoxGeometry />
+    <T.MeshStandardMaterial color="#333333" />
+  </T.Mesh>
+</T.Group>
+
+<T.Mesh receiveShadow rotation.x={degToRad(-90)}>
+  <T.CircleGeometry args={[3, 72]} />
+  <T.MeshStandardMaterial color="white" />
+</T.Mesh>
