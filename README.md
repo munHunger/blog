@@ -5,26 +5,7 @@
 </div>
 <br />
 
-<p align="center">
-<a href="https://fff.js.org"><img src="https://img.shields.io/badge/%F0%9F%8C%9F%20F%20F%20F-0.5-yellow?style=flat" alt="fff" /></a>
-<img src="https://img.shields.io/github/languages/top/importantimport/urara?color=%23ff3e00" alt="Language" />
-<a href="https://github.com/importantimport/urara/blob/main/COPYING"><img src="https://img.shields.io/github/license/importantimport/urara?color=%23fff" alt="License" /></a>
-<img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimportantimport%2Furara.svg?type=shield" alt="FOSSA Status" />
-</p>
-<p align="center">
-<a href="https://urara-demo.netlify.app">🚀 Demo</a>
-/
-<a href="https://urara-docs.netlify.app">📝 Documentation</a>
-/
-<a href="https://github.com/importantimport/urara/discussions">💬 Discussions</a>
-</p>
-<p align="center">
-<span>English</span>
-|
-<a href="https://github.com/importantimport/urara/blob/main/README.zh.md">正體中文</a>
-</p>
-
-## 🎉 Try it now!
+My personal blog "brand"
 
 ### Local
 
@@ -32,11 +13,6 @@
 npx degit importantimport/urara my-blog && cd my-blog # create a new project in my-blog
 pnpm i # if u don't have pnpm installed, run: npm i -g pnpm
 ```
-
-### Remote
-
-[![Open in StackBlitz](https://img.shields.io/badge/-Open%20in%20StackBlitz-1374ef?style=for-the-badge&logo=Amp)](https://stackblitz.com/github/importantimport/urara) [![Use this template](https://img.shields.io/badge/-Use%20this%20Template-181717?style=for-the-badge&logo=GitHub)](https://github.com/importantimport/urara/generate) [![Deploy with Vercel](https://img.shields.io/badge/-Deploy%20with%20Vercel-1374ef?style=for-the-badge&logo=Vercel)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fimportantimport%2Furara&env=URARA_SITE_URL&envDescription=Site%20URL.&envLink=https%3A%2F%2Fexample.com&project-name=urara-blog&repository-name=urara-blog) [![Deploy to Netlify](https://img.shields.io/badge/-Deploy%20to%20Netlify-15847d?style=for-the-badge&logo=Netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2Fimportantimport%2Furara#URARA_SITE_URL=https://example.com&CUSTOM_LOGO=https://github.com/importantimport/urara/raw/main/urara/assets/any@512.png)
-
 ## ⚡️ Usage
 
 ### Developing
@@ -105,9 +81,6 @@ and more...
 
 are u using Urara? add the `urara-blog` topic on ur repo!
 
-## 👥 Contributing
-
-If u're interested in contributing to Urara, pls read [contributing docs](.github/CONTRIBUTING.md) before submitting a pull request.
 
 ## 📝 License
 
