@@ -65,7 +65,7 @@ But this post is not really about GH pages, it is rather about what to do when y
 
 # Serverless backends
 
-So I was writing a time reporting page, because who doesn't love to do timereporting in tons of places!
+So I was writing a time reporting page, because who doesn't love to do time reporting in tons of places!
 The plan was to make it sync with github gists, but the problem I ran into was that my frontend couldn't read gists without cors issues.
 The solution to this was to host a server that can proxy the requests to the frontend.
 
@@ -104,7 +104,7 @@ That piece of config is all that is needed to get a node container available at 
 
 I was planning on writing this a while ago, but I got into some issues with upgrading my k8s cluster to support a specific version of knative with auto TLS support.
 And as it was my third time bricking my k8s cluster during the upgrade I started looking elsewhere as there has to be some k8s installer with sensible defaults.
-That search led me to my new favourite piece of software, namely [microk8s](https://microk8s.io/).
+That search led me to my new favorite piece of software, namely [microk8s](https://microk8s.io/).
 
 It might not be for production, but for my home setup it is amazing.
 Dead simple to install, and it has a pretty decent plugin support (knative among others), so you can quickly spin up a node with some cool k8s controllers and get going within an hour!
