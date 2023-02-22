@@ -11,8 +11,8 @@ tags:
 
 # Github pages
 
-Lately I've been using [github pages](https://pages.github.com/) a lot, and I would recomend anyone who isn't using it to start using.
-It saves you the hassle of having to get hardware to host a server, scaling if you get a lot of users (not that I do), and general avalability which you usually don't get with your run of the mill closet servers.
+Lately I've been using [github pages](https://pages.github.com/) a lot, and I would recomend anyone who isn't using it to start using it.
+It saves you the hassle of having to get hardware to host a server, scaling if you get a lot of users (not that I do), and general avalability which you usually don't get with your run of the mill at home closet servers.
 
 In fact I host this blog on GH pages and it is dead simple with a github action.
 Here is the one I use to push this blog to GH pages
