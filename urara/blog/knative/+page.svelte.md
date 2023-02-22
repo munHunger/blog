@@ -109,3 +109,33 @@ That search led me to my new favourite piece of software, namely [microk8s](http
 It might not be for production, but for my home setup it is amazing.
 Dead simple to install, and it has a pretty decent plugin support (knative among others), so you can quickly spin up a node with some cool k8s controllers and get going within an hour!
 That is pretty mind boggling, as it usually takes me hours if not days to setup a working k8s cluster (I still have issues with the networking layer).
+
+Just remember if you are using microk8s to create an ingress towards your knative network gateway. That did cause me some headache.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kourier-ingress
+  namespace: knative-serving
+  annotations:
+    cert-manager.io/cluster-issuer: lets-encrypt
+spec:
+  tls:
+    - hosts:
+        - '*.home.wunderdev.com'
+      secretName: home-tls
+  rules:
+    - host: '*.home.wunderdev.com'
+      http:
+        paths:
+          - backend:
+              service:
+                name: kourier
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+```
+
+Without it, I had nginx loadbalancer serve all my network request, and it of course had no concept of knative
