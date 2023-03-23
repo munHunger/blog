@@ -1,5 +1,5 @@
 ---
-title: 'Why your tech interviews are failing'
+title: 'Why your tech interviews are bad'
 image: '/blog/techInterviews/1/header.jpg'
 summary: An outline of why the most common tech interview structures are bad, and what could be done instead
 created: 2023-03-23
@@ -7,8 +7,6 @@ updated: 2023-03-23
 tags:
   - 'Interviews'
 ---
-
-# Why your tech interviews are failing
 
 The title may seem harsh, but I feel strongly that most tech interviews I've had and held have been pretty shaky. Let me start by listing some common interview types I think are quite bad, before giving away the golden answer for how to hold a tech interview.
 
