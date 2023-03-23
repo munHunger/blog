@@ -52,4 +52,4 @@ I've turned down quite a lot of developers that sounded really confident, but co
 
 # Conclusion
 
-In conclusion, conducting a code review as part of your interview process can be a valuable tool for evaluating a candidate's skills and determining if they are the right fit for the job. It allows you to gauge their problem-solving abilities, attention to detail, and understanding of best practices. By following the steps outlined in this post, you can improve your chances of hiring the right developer for your team.
+In conclusion, conducting a code review as part of your interview process can be a valuable tool for evaluating a candidate's skills and determining if they are the right fit for the job. It allows you to gauge their ability to read code, attention to detail, and understanding of best practices. By following the steps outlined in this post, you can improve your chances of hiring the right developer for your team.
