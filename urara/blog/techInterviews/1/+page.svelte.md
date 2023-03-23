@@ -20,7 +20,7 @@ Some people may even turn down offers that require homework, not because they do
 ## Let's just talk about it
 
 
-This approach is wayy to common. You sit down for an hour with a manager, a developer, and the applicant and talk loosely about what they have worked with.
+This approach is way to common. You sit down for an hour with a manager, a developer, and the applicant and talk loosely about what they have worked with.
 And after the hour is up you go with gut and approve or reject them soley because of their confidence, which it usually boils down to.
 
 The issue with this approach is that it is really hard to gauge what the applicant knows. And I think it is really easy to pass these interviews if you just "sound confident". On the other side of it, it is really hard as an interviewer to get a feel for how much they actually know.
