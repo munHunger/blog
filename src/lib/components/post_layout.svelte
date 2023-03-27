@@ -22,8 +22,9 @@
   export let title
   export let image
   export let in_reply_to
+  export let canonical
   // post
-  let fm = { path, slug, toc, created, updated, published, summary, tags, flags, title, image, in_reply_to }
+  let fm = { path, slug, toc, created, updated, published, summary, tags, flags, title, image, in_reply_to, canonical }
   let post = { type: typeOfPost(fm), ...fm }
 </script>
 

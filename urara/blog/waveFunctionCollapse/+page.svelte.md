@@ -8,6 +8,8 @@ tags:
   - 'typescript'
   - 'wave function collapse'
   - 'algorithm'
+flags:
+  - hidden
 ---
 
 <script>

@@ -56,6 +56,10 @@ declare global {
            */
           published?: string
           /**
+           * A canonical URL for if the blog is crossposted and should be prefered elsewhere
+           */
+          canonical?: string
+          /**
            * the featured image for article, or image for "photo" / "multi-photo" posts.
            * @remarks currently only supports string
            */

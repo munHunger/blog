@@ -10,7 +10,11 @@
 <svelte:head>
   <meta name="author" content={site.author?.name} />
   {#if post}
-    <link rel="canonical" href={site.protocol + site.domain + post.path} />
+    {#if post.canonical}
+      <link rel="canonical" href={post.canonical} />
+    {:else}
+      <link rel="canonical" href={site.protocol + site.domain + post.path} />
+    {/if}
     {#if post.type === 'article'}
       <title>{post.title} | {site.title}</title>
     {:else if post.type === 'note'}
