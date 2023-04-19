@@ -6,8 +6,6 @@ created: 2023-04-18
 tags:
   - 'kanlang'
   - 'compiler'
-flags:
-  - unlisted
 ---
 
 Have you spent sleepless nights endlessly searching for the next big thing in programming languages?
