@@ -7,7 +7,7 @@ tags:
   - 'kanlang'
   - 'compiler'
 flags:
-  - hidden
+  - unlisted
 ---
 
 Variable assignment syntax seem to differ quite a bit when looking at different programming languages.
