@@ -4,7 +4,6 @@ image: '/blog/techInterviews/1/header.jpg'
 summary: An outline of why the most common tech interview structures are bad, and what could be done instead
 created: 2023-03-23
 updated: 2023-03-23
-canonical: "https://webstep.se/nyheter--blogginlagg/blogginlagg/2023-03-27-why-your-tech-interviews-are-bad"
 tags:
   - 'Interviews'
 ---
