@@ -35,6 +35,7 @@
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
+        "name": post.title,
         "headline": post.title,
         "description": post.summary,
         "articleBody": post.html,
