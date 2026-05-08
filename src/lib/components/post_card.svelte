@@ -30,23 +30,25 @@
 </script>
 
 <svelte:head>
-    {@html `<script type="application/ld+json">
-    ${JSON.stringify(
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "name": post.title,
-        "headline": post.title,
-        "description": post.summary,
-        "articleBody": post.html,
-        "image": post.image,
-        "author": meSchema,
-        "publisher": meSchema,
-        "datePublished": post.published,
-        "dateModified": post.updated,
-      }
-    )}
-  </script>`}
+  {#if preview === false && post.type === "article"}
+      {@html `<script type="application/ld+json">
+      ${JSON.stringify(
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "name": post.title,
+          "headline": post.title,
+          "description": post.summary,
+          "articleBody": post.html,
+          "image": post.image,
+          "author": meSchema,
+          "publisher": meSchema,
+          "datePublished": post.published,
+          "dateModified": post.updated,
+        }
+      )}
+    </script>`}
+  {/if}
 </svelte:head>
 
 <svelte:element
