@@ -8,6 +8,7 @@
   import Image from '$lib/components/prose/img.svelte'
   import Pagination from '$lib/components/post_pagination.svelte'
   import Comment from '$lib/components/post_comment.svelte'
+  import { meSchema } from '$lib/me'
   export let post: Urara.Post
   export let preview: boolean = false
   export let loading: 'eager' | 'lazy' = 'lazy'
@@ -27,6 +28,24 @@
       storedTitle.set(post.title ?? post.path.slice(1))
     })
 </script>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">
+    ${JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.summary,
+        "image": post.image,
+        "author": meSchema,
+        "publisher": meSchema,
+        "datePublished": post.published,
+        "dateModified": post.updated,
+      }
+    )}
+  </script>`}
+</svelte:head>
 
 <svelte:element
   this={post.type === 'article' ? 'article' : 'div'}

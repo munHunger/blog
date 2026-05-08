@@ -9,6 +9,8 @@
   import Footer from '$lib/components/footer.svelte'
   import Post from '$lib/components/post_card.svelte'
   import Profile from '$lib/components/index_profile.svelte'
+  import { site } from '$lib/config/site'
+  import { meSchema } from '$lib/me'
 
   let allPosts: Urara.Post[]
   let allTags: string[]
@@ -36,6 +38,29 @@
     }
   })
 </script>
+<svelte:head>
+    {@html `<script type="application/ld+json">
+    ${JSON.stringify(
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": site.title,
+        "description": site.description,
+        "image": meSchema.image,
+        "publisher": meSchema,
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": posts.map((post, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": post.path,
+            "name": post.summary
+          }))
+        }
+      }
+    )}
+  </script>`}
+</svelte:head>
 
 <Head />
 

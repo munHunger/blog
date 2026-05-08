@@ -6,7 +6,7 @@ export const site: SiteConfig = {
   title: 'Wunderdev',
   subtitle: 'A personal blog about my hobby projects',
   lang: 'en-US',
-  description: 'Powered by SvelteKit/Urara',
+  description: 'A personal blog page about development',
   author: {
     avatar: '/assets/profile.jpg',
     name: 'Marcus Münger',
