@@ -32,7 +32,7 @@
   this={post.type === 'article' ? 'article' : 'div'}
   itemscope
   itemtype="https://schema.org/BlogPosting"
-  itemprop="blogPost"
+  itemprop="mainContentOfPage"
   class:md:mb-8={!preview}
   class:lg:mb-16={!preview}
   class:group={preview}
