@@ -37,6 +37,7 @@
         "@type": "BlogPosting",
         "headline": post.title,
         "description": post.summary,
+        "articleBody": post.html,
         "image": post.image,
         "author": meSchema,
         "publisher": meSchema,
