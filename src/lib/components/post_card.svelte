@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-  {#if preview === false && post.type === "article"}
+  {#if preview === false && post.type === "article" && post.html}
       {@html `<script type="application/ld+json">
       ${JSON.stringify(
         {
