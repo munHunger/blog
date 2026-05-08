@@ -10,7 +10,7 @@
   <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
     <article
       class="card bg-base-100 rounded-none md:rounded-box shadow-xl md:mb-8 z-10">
-      <main itemprop="articleBody" class="card-body prose urara-prose">
+      <main class="card-body prose urara-prose">
         <h1 class="opacity-20 text-6xl md:text-[12rem] -mt-2 mb-0">
           {$page.status ?? '404'}
         </h1>

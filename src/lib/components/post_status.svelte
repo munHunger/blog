@@ -21,14 +21,12 @@
   <a href={post.path} class="u-url u-uid swap group/time">
     <time
       class="group-hover/time:opacity-0 font-semibold opacity-75 duration-500 ease-in-out mr-auto dt-published"
-      datetime={jsonPublished}
-      itemprop="datePublished">
+      datetime={jsonPublished}>
       {stringPublished}
     </time>
     <time
       class="opacity-0 group-hover/time:opacity-100 font-semibold text-primary duration-500 ease-in-out mr-auto dt-updated"
-      datetime={jsonUpdated}
-      itemprop="dateModified">
+      datetime={jsonUpdated}>
       {stringUpdated}
     </time>
   </a>

@@ -113,10 +113,7 @@
         </div>
       {/if}
       <main
-        class="flex flex-col relative bg-base-100 md:bg-transparent md:gap-8 z-10"
-        itemprop="mainEntityOfPage"
-        itemscope
-        itemtype="https://schema.org/Blog">
+        class="flex flex-col relative bg-base-100 md:bg-transparent md:gap-8 z-10">
         {#each posts as post, index}
           {@const year = new Date(post.published ?? post.created).getFullYear()}
           {#if !years.includes(year)}
