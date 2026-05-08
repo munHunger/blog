@@ -1,5 +1,4 @@
 export const meSchema = {
-      "@context": "https://schema.org",
       "@type": "Person",
       "@id": "https://wunderdev.com/#person",
       "name": "Marcus Münger",
